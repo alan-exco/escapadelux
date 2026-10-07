@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leave a review | Escapade Lux Boutique Residence</title>
+<meta name="description" content="Tell us about your stay at Escapade Lux, Gaborone.">
+<meta name="theme-color" content="#140F12">
+<link rel="icon" href="images/favicon.png">
+<meta property="og:title" content="Leave a review | Escapade Lux Boutique Residence">
+<meta property="og:description" content="Tell us about your stay at Escapade Lux, Gaborone.">
+<meta property="og:image" content="images/exterior.jpg">
+<link rel="preload" href="fonts/bodoni.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- PROMOTION STRIP: change the code when a promotion runs, or delete this whole <div> when none is on. -->
+<div class="promo">Book direct online with code <b>SUMMER26</b> for an exclusive discount</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Escapade Lux home">
+      <img src="images/logo.svg" alt="">
+      <span>Escapade Lux<small>BOUTIQUE RESIDENCE</small></span>
+    </a>
+    <nav aria-label="Main"><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#suites">Suites</a></li>
+      <li><a href="rates.html">Rates</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="leave-review.html">Leave a review</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-gold" href="https://book-directonline.com/properties/escapadeluxaccommodation" target="_blank" rel="noopener">Book now</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <img src="images/suite.jpg" alt="">
+  <div class="wrap">
+    <span class="eyebrow">LEAVE A REVIEW</span>
+    <h1>How was <em>your stay?</em></h1>
+    <p>Your feedback helps us keep improving, and helps future guests choose us.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+      <h2>A few words go a long way.</h2>
+      <p class="lead">Tell us what you enjoyed and what we could do better. We read every review.</p>
+      <div class="hero-actions"><a class="btn btn-line dark-line" href="reviews.html">Read guest reviews</a></div>
+    </div>
+    <!-- Netlify Forms: submissions appear under Site > Forms. Add an email notification to admin@escapadelux.com. -->
+    <form class="form" name="review" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="review">
+      <p class="hp"><label>Leave blank <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field-row">
+        <div class="field"><label for="rn">Name</label><input id="rn" name="name" autocomplete="name"></div>
+        <div class="field"><label for="rp">Phone</label><input id="rp" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="re">Email (required)</label><input id="re" name="email" type="email" autocomplete="email" required></div>
+      <div class="field-row">
+        <div class="field"><label for="rd">When did you stay?</label><input id="rd" name="stay" placeholder="e.g. July 2026"></div>
+        <div class="field"><label for="rr">Your rating</label><select id="rr" name="rating"><option>5 – Excellent</option><option>4 – Very good</option><option>3 – Good</option><option>2 – Fair</option><option>1 – Poor</option></select></div>
+      </div>
+      <div class="field"><label for="rm">Your review</label><textarea id="rm" name="review" required></textarea></div>
+      <button class="btn btn-gold" type="submit">Send review</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <a class="brand" href="index.html" aria-label="Escapade Lux home"><img src="images/logo.svg" alt="" style="width:54px;height:54px"><span>Escapade Lux<small>BOUTIQUE RESIDENCE</small></span></a>
+        <p>Plot 34268, Tshamawe, Block 8, Airport Road, Gaborone, Botswana</p>
+      </div>
+      <div>
+        <h4>STAY</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="rates.html">Direct booking rates</a></li>
+          <li><a href="reviews.html">Guest reviews</a></li>
+          <li><a href="leave-review.html">Leave a review</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="tel:+26772829770">+267 72 829 770</a></li>
+          <li><a href="tel:+26776625661">+267 76 625 661</a></li>
+          <li><a href="mailto:admin@escapadelux.com">admin@escapadelux.com</a></li>
+          <li><a class="soc" href="https://wa.me/26772829770?text=Hello%20Escapade%20Lux%2C%20I%27d%20like%20to%20enquire%20about%20a%20booking." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.78 1.93.85 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>WhatsApp us</a></li>
+          <li><a class="soc" href="https://www.facebook.com/share/19MFHfV8Jy/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>Follow us on Facebook</a></li>
+          <li><a href="vacancies.html">Vacancies</a></li>
+          <li><a href="policies.html">Policies, terms &amp; conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© <span id="yr">2026</span> Escapade Lux Accommodation. Owned and operated by Whichway Investments (Botswana) Pty Ltd, Gaborone, Botswana.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/26772829770?text=Hello%20Escapade%20Lux%2C%20I%27d%20like%20to%20enquire%20about%20a%20booking." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.78 1.93.85 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg><span>WhatsApp us</span></a>
+
+<div class="callbar">
+  <a class="btn btn-gold" href="https://book-directonline.com/properties/escapadeluxaccommodation" target="_blank" rel="noopener">Book now</a>
+  <a class="btn btn-wa" href="https://wa.me/26772829770?text=Hello%20Escapade%20Lux%2C%20I%27d%20like%20to%20enquire%20about%20a%20booking." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.78 1.93.85 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg>WhatsApp</a>
+  <a class="btn btn-line" href="tel:+26772829770">Call</a>
+</div>
+
+<script>
+  // Home / logo on the home page: smooth scroll to the very top
+  document.querySelectorAll('a[href="index.html"]').forEach(a=>a.addEventListener('click',e=>{
+    if(/(^|\/)(index\.html)?$/.test(location.pathname)){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname)}
+  }));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
