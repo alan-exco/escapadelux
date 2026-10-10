@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap");
-@font-face{font-family:"Bodoni";src:url(bodoni.woff2) format("woff2-variations");font-weight:400 900;font-style:normal;font-display:swap}
-@font-face{font-family:"Bodoni";src:url(bodoni-italic.woff2) format("woff2-variations");font-weight:400 900;font-style:italic;font-display:swap}
+
+@font-face{font-family:"Bodoni";src:url(../fonts/bodoni.woff2) format("woff2-variations");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Bodoni";src:url(../fonts/bodoni-italic.woff2) format("woff2-variations");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url(../fonts/jost.woff2) format("woff2-variations");font-weight:100 900;font-display:swap}
 
 :root{
   --onyx:#140F12;        /* the logo's black */
@@ -368,3 +369,75 @@ footer .soc svg{color:#E6DDE0}
 .hero-r .rating b{font-size:24px}
 @media (max-width:760px){.hero-r::after{background:linear-gradient(90deg,rgba(16,14,15,.78) 0%,rgba(16,14,15,.45) 42%,rgba(16,14,15,0) 70%),linear-gradient(180deg,rgba(16,14,15,0) 50%,rgba(16,14,15,.55) 85%,rgba(16,14,15,.85) 100%)}.hero-r .wrap > div{justify-self:stretch}}
 @media (max-width:760px){.hero-r > picture img{object-position:82% 35%}}
+
+/* ===== Oct 8: mobile menu ===== */
+.menu-btn{display:none;width:48px;height:48px;border:1px solid rgba(217,174,90,.5);background:transparent;border-radius:4px;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:0}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--gold);transition:transform .2s,opacity .2s}
+.menu-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn.open span:nth-child(2){opacity:0}
+.menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{background:#140F12;border-top:1px solid rgba(217,174,90,.25)}
+.mnav ul{list-style:none;margin:0;padding:8px var(--g) 18px;display:block}
+.mnav li{border-bottom:1px solid rgba(255,255,255,.07)}
+.mnav a{display:block;padding:15px 0;font-size:19px;color:#F1E9DC;text-decoration:none}
+.mnav a:hover{color:var(--gold)}
+@media (max-width:1240px){.menu-btn{display:flex}}
+@media (min-width:1241px){.mnav{display:none!important}}
+@media (max-width:760px){header .wrap{gap:12px}header .wrap > .btn-gold{display:none}}
+
+/* ===== Oct 8: ratings strip under the hero ===== */
+.rating-strip{background:#140F12;border-bottom:1px solid rgba(217,174,90,.2)}
+.rating-strip .wrap{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 18px;padding-top:14px;padding-bottom:14px}
+.rating-strip .wrap > span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#BFB4B8}
+.rating-strip .ratings{margin:0;gap:8px;flex-wrap:wrap;justify-content:center}
+.rating-strip .rating{padding:5px 9px 5px 6px;gap:7px;border-radius:5px;box-shadow:none}
+.rating-strip .rating .r-bk{height:20px;border-radius:4px}
+.rating-strip .rating .r-ag{height:18px}
+.rating-strip .rating .r-gg{height:12px}
+.rating-strip .rating b{font-size:14px}
+.rating-strip .rating b small{font-size:10px}
+.rating-strip .rating b i{font-size:9px;margin-left:3px}
+
+/* ===== Oct 8: phone hero = photo on top, words below (no overlay) ===== */
+@media (max-width:760px){
+  .hero-r{display:block;min-height:0;padding-top:0;background:#140F12}
+  .hero-r > img{position:static;display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:30% 45%}
+  .hero-r::after{display:none}
+  .hero-r .wrap{padding-top:28px;padding-bottom:34px}
+  .hero-r .hero-actions{margin-top:24px}
+  .promo{font-size:16px;padding:10px var(--g)}
+  .promo b{padding:0 8px;margin:2px 3px;border-width:1.5px}
+}
+
+/* ===== Oct 8: photo gallery ===== */
+.g-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.g-tabs a{padding:10px 18px;border:1px solid rgba(29,23,26,.18);text-decoration:none;color:var(--ink,#1D171A);font-size:15.5px;border-radius:999px;background:#fff}
+.g-tabs a.on{background:#1D171A;color:#fff;border-color:#1D171A}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:10px}
+.g-item{position:relative;padding:0;border:0;background:#E9E1D4;cursor:zoom-in;overflow:hidden}
+.g-item[hidden]{display:none}
+.g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.g-item:hover img{transform:scale(1.04)}
+.g-grid .g-item:first-child{grid-column:span 2;grid-row:span 2}
+@media (max-width:980px){.g-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:180px}}
+@media (max-width:640px){.g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:6px}.g-tabs{flex-wrap:nowrap;overflow-x:auto;margin-left:calc(-1*var(--g));margin-right:calc(-1*var(--g));padding:0 var(--g) 4px}.g-tabs a{white-space:nowrap}}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(12,10,11,.96);display:flex;align-items:center;justify-content:center}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:92vw;display:flex;flex-direction:column;align-items:center}
+.lb img{max-width:92vw;max-height:82vh;object-fit:contain;display:block}
+.lb figcaption{display:flex;justify-content:space-between;gap:20px;width:100%;margin-top:12px;color:#E6DDE0;font-size:15px}
+.lb-n{color:#9E9397;white-space:nowrap}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;cursor:pointer;border-radius:50%;width:54px;height:54px;font-size:34px;line-height:1;display:grid;place-items:center}
+.lb button:hover{background:rgba(217,174,90,.3)}
+.lb-x{top:18px;right:18px}
+.lb-prev{left:18px;top:50%;transform:translateY(-50%)}
+.lb-next{right:18px;top:50%;transform:translateY(-50%)}
+@media (max-width:640px){.lb button{width:44px;height:44px;font-size:28px}.lb-prev{left:6px}.lb-next{right:6px}.lb img{max-width:100vw}}
+
+/* Oct 10: Google Maps button in the ratings strip, left side, same size as rating cards */
+.rating-strip .wrap{justify-content:flex-start}
+.rs-find{display:flex;align-items:center;gap:7px;background:#fff;color:#1D171A;text-decoration:none;border-radius:5px;padding:5px 11px 5px 8px;font-size:14px;font-weight:600;line-height:1;white-space:nowrap}
+.rs-find svg{width:18px;height:18px;color:#D93025;flex:none}
+.rs-find:hover{background:#F1E9DC}
+.rs-gap{flex:1}
+@media (max-width:760px){.rating-strip .wrap{justify-content:center}.rs-gap{display:none}.rs-find{order:3}}
