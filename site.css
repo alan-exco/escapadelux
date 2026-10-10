@@ -1,7 +1,7 @@
 
-@font-face{font-family:"Bodoni";src:url(../fonts/bodoni.woff2) format("woff2-variations");font-weight:400 900;font-style:normal;font-display:swap}
-@font-face{font-family:"Bodoni";src:url(../fonts/bodoni-italic.woff2) format("woff2-variations");font-weight:400 900;font-style:italic;font-display:swap}
-@font-face{font-family:"Jost";src:url(../fonts/jost.woff2) format("woff2-variations");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Bodoni";src:url(bodoni.woff2) format("woff2-variations");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Bodoni";src:url(bodoni-italic.woff2) format("woff2-variations");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Jost";src:url(jost.woff2) format("woff2-variations");font-weight:100 900;font-display:swap}
 
 :root{
   --onyx:#140F12;        /* the logo's black */
@@ -441,3 +441,8 @@ footer .soc svg{color:#E6DDE0}
 .rs-find:hover{background:#F1E9DC}
 .rs-gap{flex:1}
 @media (max-width:760px){.rating-strip .wrap{justify-content:center}.rs-gap{display:none}.rs-find{order:3}}
+
+/* Netlify "Powered by" badge sits bottom-right: keep our buttons clear of it */
+.wa-float{right:auto !important;left:22px !important}
+@media (max-width:760px){.callbar{padding-bottom:calc(58px + env(safe-area-inset-bottom)) !important}}
+@media (max-width:760px){body{padding-bottom:132px !important}}
