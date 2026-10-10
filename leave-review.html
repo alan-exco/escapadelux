@@ -11,6 +11,7 @@
 <meta property="og:description" content="Tell us about your stay at Escapade Lux, Gaborone.">
 <meta property="og:image" content="exterior.jpg">
 <link rel="preload" href="bodoni.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="jost.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
 </head>
 <body id="top">
@@ -29,6 +30,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="index.html#suites">Suites</a></li>
+      <li><a href="photos.html">Photos</a></li>
       <li><a href="rates.html">Rates</a></li>
       <li><a href="reviews.html">Reviews</a></li>
       <li><a href="leave-review.html">Leave a review</a></li>
@@ -36,7 +38,21 @@
       <li><a href="index.html#contact">Contact</a></li>
     </ul></nav>
     <a class="btn btn-gold" href="https://book-directonline.com/properties/escapadeluxaccommodation" target="_blank" rel="noopener">Book now</a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile" hidden><ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#suites">Suites</a></li>
+    <li><a href="photos.html">Photos</a></li>
+    <li><a href="rates.html">Rates</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="leave-review.html">Leave a review</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="vacancies.html">Vacancies</a></li>
+    <li><a href="policies.html">Policies &amp; terms</a></li>
+  </ul></nav>
 </header>
 
 <main id="main">
@@ -89,6 +105,7 @@
         <h4>STAY</h4>
         <ul>
           <li><a href="about.html">About us</a></li>
+          <li><a href="photos.html">Photos</a></li>
           <li><a href="rates.html">Direct booking rates</a></li>
           <li><a href="reviews.html">Guest reviews</a></li>
           <li><a href="leave-review.html">Leave a review</a></li>
@@ -126,6 +143,9 @@
     if(/(^|\/)(index\.html)?$/.test(location.pathname)){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname)}
   }));
   document.getElementById('yr').textContent=new Date().getFullYear();
+  (function(){const b=document.querySelector('.menu-btn'),m=document.getElementById('mnav');if(!b)return;
+    b.addEventListener('click',()=>{const o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',o);b.classList.toggle('open',o)});
+    m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.hidden=true;b.classList.remove('open');b.setAttribute('aria-expanded','false')}));})();
 </script>
 </body>
 </html>
