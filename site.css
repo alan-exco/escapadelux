@@ -446,3 +446,9 @@ footer .soc svg{color:#E6DDE0}
 .wa-float{right:auto !important;left:22px !important}
 @media (max-width:760px){.callbar{padding-bottom:calc(58px + env(safe-area-inset-bottom)) !important}}
 @media (max-width:760px){body{padding-bottom:132px !important}}
+
+/* Oct 10: mobile menu is a <nav>; keep it visible when opened */
+@media (max-width:1240px){nav.mnav:not([hidden]){display:block !important}}
+@media (max-width:1240px){nav.mnav:not([hidden]){max-height:calc(100dvh - 150px);overflow-y:auto;-webkit-overflow-scrolling:touch}nav.mnav ul{padding-bottom:96px}}
+@media (max-width:1240px){nav.mnav:not([hidden]){max-height:calc(100dvh - 230px)}nav.mnav ul{padding-bottom:16px}}
+@media (max-width:1240px){body:has(#mnav:not([hidden])) .callbar,body:has(#mnav:not([hidden])) .wa-float{display:none !important}nav.mnav:not([hidden]){max-height:calc(100dvh - 150px)}nav.mnav ul{padding-bottom:24px}}
